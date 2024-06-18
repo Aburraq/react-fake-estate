@@ -1,0 +1,144 @@
+@import "../../responsive.scss";
+@import "../../colors.scss";
+
+.profilePage{
+    display: flex;
+    height: 100%;
+    
+
+    @include md{
+        flex-direction: column;
+        overflow: scroll;
+
+                /* Custom scrollbar styles */
+                &::-webkit-scrollbar {
+                    width: 8px; /* Width of the scrollbar */
+                }
+        
+                &::-webkit-scrollbar-track {
+                    background: $color-ciner; /* Color of the track */
+                    border-radius: 10px; /* Rounded corners for the track */
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                    background: $color-almond; /* Color of the thumb */
+                    border-radius: 10px; /* Rounded corners for the thumb */
+                }
+        
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $color-camblue;
+                }
+    }
+
+    .details{
+        flex: 3;
+        overflow-y: scroll;
+        padding-bottom: 50px;
+
+                /* Custom scrollbar styles */
+                &::-webkit-scrollbar {
+                    width: 8px; /* Width of the scrollbar */
+                }
+        
+                &::-webkit-scrollbar-track {
+                    background: $color-ciner; /* Color of the track */
+                    border-radius: 10px; /* Rounded corners for the track */
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                    background: $color-almond; /* Color of the thumb */
+                    border-radius: 10px; /* Rounded corners for the thumb */
+                }
+        
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $color-camblue;
+                }
+
+
+        @include md{
+            flex: none;
+            height: max-content;
+            
+        }
+
+
+
+        .wrapper{
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding-top: 50px;
+
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            h1{
+                font-weight: 300;
+
+            }
+
+            button{
+                padding: 12px 24px;
+                background: $color-camblue;
+                cursor: pointer;
+                border: none;
+            }
+
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                border: 1px solid $color-ciner;
+
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                button{
+                    width: 100px;
+                    background: $color-camblue;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .chatContainer{
+        flex: 2;
+        background: $color-ciner;
+        height: 100%;
+        padding-top: 50px;
+
+
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding: 0 20px;
+            height: 100%;
+        }
+    }
+
+
+}

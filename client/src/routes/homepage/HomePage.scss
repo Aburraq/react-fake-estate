@@ -1,0 +1,100 @@
+@import "../../colors.scss"; 
+@import "../../responsive.scss";
+
+
+.homePage{
+    display: flex;
+    height: 100%;
+
+    .textContainer{
+        flex:3;
+    
+        .wrapper{
+            padding-right: 100px;;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+            height: 100%;
+
+            @include md{
+                padding: 0;
+                overflow-y: scroll;
+
+                            /* Custom scrollbar styles */
+            &::-webkit-scrollbar {
+                width: 8px; /* Width of the scrollbar */
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $color-almond; /* Color of the track */
+                border-radius: 10px; /* Rounded corners for the track */
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $color-ciner; /* Color of the thumb */
+                border-radius: 10px; /* Rounded corners for the thumb */
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: $color-camblue;
+            }
+            }
+
+            @include sm{
+                justify-content: flex-start;
+            }
+
+            .title{
+                font-size: 64px;
+
+                @include lg{
+                    font-size: 48px;
+                }
+            }
+
+            .boxes{
+                display: flex;
+                justify-content: space-between;
+
+                @include sm{
+                    display: none;
+                }
+
+                h1{
+                    font-size: 36px;
+
+                    @include lg{
+                        font-size: 32px;
+                    }
+                }
+
+                h2{
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .imgContainer{
+        flex: 2;
+        background-color: $color-ciner;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include img{
+            display: none;
+        }
+
+        img{
+            width: 100%;
+            position: absolute;
+            right: 0;
+            height: 100%;    
+            
+
+        }
+    }
+}

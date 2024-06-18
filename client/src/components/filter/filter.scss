@@ -1,0 +1,71 @@
+@import "../../colors.scss";
+@import "../../responsive.scss";
+
+.filter{
+
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    h1{
+        font-weight: 300;
+        font-size: 24px;
+
+    }
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        label{
+            font-size: 10px;
+        }
+
+        input,select{
+            width: 100px;
+            padding: 10px;
+            border: 1px solid $color-ciner;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .top{
+
+        background: $color-almond;
+
+        input{
+            width: 100%;
+        }
+
+    }
+
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        button{
+            width: 100px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: $color-camblue;
+            border-radius: 10px;
+            transition: all .3s ease;
+
+            img{
+                width: 24px;
+                height: 24px;
+            }
+
+            &:hover{
+                background-color: $color-emerland;
+
+            }
+        }
+    }
+}

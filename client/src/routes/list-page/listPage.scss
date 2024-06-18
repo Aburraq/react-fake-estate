@@ -1,0 +1,47 @@
+@import "../../colors.scss";
+@import "../../responsive.scss";
+
+.listPage{
+    display: flex;
+    height: 100%;
+
+    .listContainer{
+        flex: 3;
+        height: 100%;
+
+        .wrapper{
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            overflow-y: scroll;
+            height: 100%;
+            padding-bottom: 50px;
+
+            /* Custom scrollbar styles */
+            &::-webkit-scrollbar {
+                width: 8px; /* Width of the scrollbar */
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $color-almond; /* Color of the track */
+                border-radius: 10px; /* Rounded corners for the track */
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $color-ciner; /* Color of the thumb */
+                border-radius: 10px; /* Rounded corners for the thumb */
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: $color-camblue;
+            }
+          }
+        }
+    }
+
+    .mapContainer{
+        flex: 2;
+        height: 100%;
+        background-color: $color-ciner;
+    }
